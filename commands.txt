@@ -1,0 +1,2 @@
+chown -R ubuntu: ubuntu /var/www/html
+sudo chmod -R u+w /var/www/html/

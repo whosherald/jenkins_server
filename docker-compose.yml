@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins_main_server
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+
+volumes:
+  jenkins_data:
+
+
+# This isa container that will contain jenkins pipeline
+# the volumes makes suere that there is persitency in the context of data.
